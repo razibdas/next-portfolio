@@ -23,7 +23,9 @@ const page = () => {
                         </p>
                     </div>
                     {/* skill container */}
-                    <div className=''>Skill</div>
+                    <div className='flex flex-col gap-12 justify-center'>
+                        
+                    </div>
                     {/* experience container */}
                     <div className=''>
                         <p>Experience</p>
