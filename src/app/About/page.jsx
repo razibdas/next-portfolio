@@ -298,6 +298,7 @@ const page = () => {
                                 SCSS
                             </div>
                             <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+  
                                 Tailwind CSS
                             </div>
                             <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
