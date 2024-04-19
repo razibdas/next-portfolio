@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Navlink from "./Navlink";
 import { motion } from 'framer-motion'
+import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa6";
 
 
 const links = [
@@ -53,7 +54,7 @@ const Navbar = () => {
         opened: {
             x: 0,
             transition: {
-                when:"beforeChildren",
+                when: "beforeChildren",
                 staggerChildren: 0.2,
             },
         }
@@ -84,17 +85,13 @@ const Navbar = () => {
                     <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">.dev</span>
                 </Link>
             </div>
-            <div className="">
-                <Link href="#" className="hidden md:flex gap-4 w-1/3">
-                    <Image src="/github.png" alt="" width={24} height={24} />
-                    <Image src="/facebook.png" alt="" width={24} height={24} />
-                    <Image src="/dribbble.png" alt="" width={24} height={24} />
-                    <Image src="/instagram.png" alt="" width={24} height={24} />
-                    <Image src="/linkedin.png" alt="" width={24} height={24} />
-                    <Image src="/pinterest.png" alt="" width={24} height={24} />
-                </Link>
-
+           
+            <div className="flex gap-4 text-3xl">
+                <Link href="https://github.com/razibdas"> <FaGithub /></Link>
+                <Link href="https://web.facebook.com/razib.kumar.336"><FaFacebook /></Link>
+                <Link href="https://www.linkedin.com/in/razib-das-0838532a7/"><FaLinkedin/></Link>
             </div>
+
             {/* responsive menu */}
             <div className="md:hidden">
                 <button onClick={() => setOpen((prev) => !prev)} className="w-10 h-8 flex flex-col justify-between relative z-50">
@@ -110,7 +107,7 @@ const Navbar = () => {
                     <motion.div variants={listVariants}
                         initial="closed" animate="opened" className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 z-40">
                         {links.map(link => (
-                            <motion.div variants={listItemVariants}  key={link.title}>
+                            <motion.div variants={listItemVariants} key={link.title}>
                                 <Link href={link.url}>{link.title}</Link>
                             </motion.div>
                         ))}
