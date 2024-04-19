@@ -88,8 +88,9 @@ const Navbar = () => {
            
             <div className="flex gap-4 text-3xl">
                 <Link href="https://github.com/razibdas"> <FaGithub /></Link>
-                
+
                 <Link href="https://web.facebook.com/razib.kumar.336"><FaFacebook /></Link>
+                
                 <Link href="https://www.linkedin.com/in/razib-das-0838532a7/"><FaLinkedin/></Link>
             </div>
 
